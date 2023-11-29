@@ -1,0 +1,23 @@
+{% extends 'Club Page.html' %}
+{% block body %}
+<form method="POST">
+    {% csrf_token %}
+    <div class="row" >				
+        <div class="col-md-2" style="border-style: ridge;background-color:#0273dd;color: white;"><b>ID</b></div>
+        <div class="col-md-2" style="border-style: ridge;background-color:#0273dd;color: white;"><b>Vehicle</b></div>
+        <div class="col-md-2" style="border-style: ridge;background-color:#0273dd;color: white;"><b>Customer</b></div>
+        <div class="col-md-2" style="border-style: ridge;background-color:#0273dd;color: white;"><b>Mobile</b></div>
+        <div class="col-md-2" style="border-style: ridge;background-color:#0273dd;color: white;"><b></b></div>
+    </div>
+    {% for d in data %}
+    <div class='row' >
+        <div class='col-md-2' style='border-style: ridge;'>$id</div>
+        <div class='col-md-2' style='border-style: ridge;'>$vehicle</div>
+        <div class='col-md-2' style='border-style: ridge;'>$name</div>
+        <div class='col-md-2' style='border-style: ridge;'>$mobile</div>
+        <div class='col-md-2' style='border-style: ridge;'><a href='/Club View Booking/?id={{d.0}}'>More</a></div>
+        
+    </div>
+</form>
+{% endfor %}
+{% endblock %}

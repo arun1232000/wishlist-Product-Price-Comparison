@@ -1,0 +1,27 @@
+{% extends 'Shop Page.html' %}
+{% block body %}
+<form method="POST">
+    {% csrf_token %}
+    <div class="row" >
+        <div class="col-md-2" style="border-style: ridge;background-color:#0273dd;color: white;"><b>Product Name</b></div>
+        <div class="col-md-2" style="border-style: ridge;background-color:#0273dd;color: white;"><b>Product Price</b></div>
+        <div class="col-md-2" style="border-style: ridge;background-color:#0273dd;color: white;"><b>Customer</b></div>
+        <div class="col-md-2" style="border-style: ridge;background-color:#0273dd;color: white;"><b>Email</b></div>
+        <div class="col-md-2" style="border-style: ridge;background-color:#0273dd;color: white;"><b>Amount Received</b></div>
+        <div class="col-md-2" style="border-style: ridge;background-color:#0273dd;color: white;"><b>Quantity</b></div>
+
+    </div>
+    {% for d in data %}
+    <div class='row' >
+        <div class='col-md-2' style='border-style: ridge;'>{{d.5}}</div>
+        <div class='col-md-2' style='border-style: ridge;'>{{d.6}}</div>
+        <div class='col-md-2' style='border-style: ridge;'>{{d.1}}</div>
+        <div class='col-md-2' style='border-style: ridge;'>{{d.0}}</div>
+        <div class='col-md-2' style='border-style: ridge;'>{{d.15}}</div>
+        <div class='col-md-2' style='border-style: ridge;'>{{d.16}}</div>
+
+        
+    </div>
+</form>
+{% endfor %}
+{% endblock %}

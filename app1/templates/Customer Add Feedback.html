@@ -1,0 +1,23 @@
+{% extends 'Customer Page.html' %}
+{% block body %}
+<form action="#" method="post" class="banner_form">
+                    
+    {% csrf_token %}
+<table align="center">
+
+{% if msg %}
+<script>
+alert("Added Successfully");
+</script>
+{% endif %}
+<tr>  <td >FEEDBACK DESCRIPTION</td><td style="color: white;"><input type="text" class="textbox" name="Address"  required="" ></td></tr>
+
+
+<tr>
+<td><input type="submit" name="submit" value="Save" class="but"></td>
+</tr>
+
+
+</table>
+</form>
+{% endblock %}
